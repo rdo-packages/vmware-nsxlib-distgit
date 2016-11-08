@@ -1,5 +1,6 @@
-# UUID          Group Name
-False 	Non-Interactive Users
-ee8e45c9a6919af8caa0c6c7d99a121573db1539       	openstack/vmware-nsxlib-distgit-core
-9a5ff92d1de2af263fc52bffa689e00268dcc72e        	openstack/vmware-nsxlib-distgit-ptl
-global:Registered-Users		Registered Users
+# UUID                                  	Group Name
+#
+63673ea7f2ae6a5666566b1ea9f14e473d00f5a9	rdo-core
+9a5ff92d1de2af263fc52bffa689e00268dcc72e	openstack/vmware-nsxlib-distgit-ptl
+ee8e45c9a6919af8caa0c6c7d99a121573db1539	openstack/vmware-nsxlib-distgit-core
+global:Registered-Users                 	Registered Users
