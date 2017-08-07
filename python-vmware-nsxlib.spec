@@ -30,7 +30,6 @@ BuildRequires:  python-subunit
 BuildRequires:  python-testrepository
 BuildRequires:  python-testscenarios
 BuildRequires:  python-testtools
-BuildRequires:  python-webtest
 BuildRequires:  python-coverage
 BuildRequires:  python2-devel
 BuildRequires:  python-hacking
@@ -89,7 +88,6 @@ BuildRequires:  python3-subunit
 BuildRequires:  python3-testrepository
 BuildRequires:  python3-testscenarios
 BuildRequires:  python3-testtools
-BuildRequires:  python3-webtest
 BuildRequires:  python3-coverage
 BuildRequires:  python3-devel
 BuildRequires:  python3-hacking
