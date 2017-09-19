@@ -9,7 +9,7 @@
 %global module vmware_nsxlib
 
 Name:           python-%{pypi_name}
-Version:        10.1.2
+Version:        11.0.0
 Release:        1%{?dist}
 Summary:        A common library that interfaces with VMware NSX
 
@@ -189,6 +189,9 @@ rm -rf .testrepository
 %endif
 
 %changelog
+* Tue Sep 19 2017 Alfredo Moralejo <amoralej@redhat.com> 11.0.0-1
+- Update to 11.0.0
+
 * Fri Aug 25 2017 Alfredo Moralejo <amoralej@redhat.com> 10.1.2-1
 - Update to 10.1.2
 
