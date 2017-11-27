@@ -195,3 +195,4 @@ rm -rf .testrepository
 * Fri Aug 25 2017 Alfredo Moralejo <amoralej@redhat.com> 10.1.2-1
 - Update to 10.1.2
 
+# REMOVEME: error caused by commit http://git.openstack.org/cgit/openstack/vmware-nsxlib/commit/?id=f3c437d0d5853805862b65b704728c218e56a1f5
