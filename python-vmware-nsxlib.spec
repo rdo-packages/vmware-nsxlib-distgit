@@ -187,3 +187,4 @@ rm -rf .testrepository
 %endif
 
 %changelog
+# REMOVEME: error caused by commit http://git.openstack.org/cgit/openstack/vmware-nsxlib/commit/?id=103700b64c1258bfde307865f4dbf00143d9c582
