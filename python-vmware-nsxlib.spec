@@ -23,37 +23,37 @@ Summary:        A common library that interfaces with VMware NSX
 %{?python_provide:%python_provide python2-%{pypi_name}}
 
 BuildRequires:  git
-BuildRequires:  python-fixtures
+BuildRequires:  python2-fixtures
 BuildRequires:  python-requests-mock
-BuildRequires:  python-setuptools
-BuildRequires:  python-subunit
-BuildRequires:  python-testrepository
-BuildRequires:  python-testscenarios
-BuildRequires:  python-testtools
+BuildRequires:  python2-setuptools
+BuildRequires:  python2-subunit
+BuildRequires:  python2-testrepository
+BuildRequires:  python2-testscenarios
+BuildRequires:  python2-testtools
 BuildRequires:  python2-devel
-BuildRequires:  python-hacking
-BuildRequires:  python-mock
+BuildRequires:  python2-hacking
+BuildRequires:  python2-mock
 BuildRequires:  python-neutron-lib
-BuildRequires:  python-oslo-sphinx
-BuildRequires:  python-oslotest
-BuildRequires:  python-pbr
-BuildRequires:  python-reno
-BuildRequires:  python-sphinx
-BuildRequires:  python-tenacity
-BuildRequires:  python-testresources
-BuildRequires:  python-sphinx
-Requires:       python-pbr >= 2.0.0
-Requires:       python-eventlet >= 0.18.2
-Requires:       python-netaddr >= 0.7.13
-Requires:       python-tenacity >= 3.2.1
-Requires:       python-six >= 1.9.0
-Requires:       python-neutron-lib >= 1.9.0
-Requires:       python-oslo-i18n >= 2.1.0
-Requires:       python-oslo-log >= 3.22.0
-Requires:       python-oslo-serialization >= 1.10.0
-Requires:       python-oslo-service >= 1.10.0
-Requires:       python-oslo-utils >= 3.20.0
-Requires:       pyOpenSSL >= 0.14
+BuildRequires:  python2-oslo-sphinx
+BuildRequires:  python2-oslotest
+BuildRequires:  python2-pbr
+BuildRequires:  python2-reno
+BuildRequires:  python2-sphinx
+BuildRequires:  python2-tenacity
+BuildRequires:  python2-testresources
+BuildRequires:  python2-sphinx
+Requires:       python2-pbr >= 2.0.0
+Requires:       python2-eventlet >= 0.18.2
+Requires:       python2-netaddr >= 0.7.18
+Requires:       python2-tenacity >= 3.2.1
+Requires:       python2-six >= 1.10.0
+Requires:       python-neutron-lib >= 1.13.0
+Requires:       python2-oslo-i18n >= 3.15.3
+Requires:       python2-oslo-log >= 3.36.0
+Requires:       python2-oslo-serialization >= 2.18.0
+Requires:       python2-oslo-service >= 1.24.0
+Requires:       python2-oslo-utils >= 3.33.0
+Requires:       python2-pyOpenSSL >= 16.2.0
 Requires:       python-enum34
 
 %description -n python2-%{pypi_name}
@@ -100,16 +100,16 @@ BuildRequires:  python3-tenacity
 BuildRequires:  python3-testresources
 Requires:       python3-pbr >= 2.0.0
 Requires:       python3-eventlet >= 0.18.2
-Requires:       python3-netaddr >= 0.7.13
+Requires:       python3-netaddr >= 0.7.18
 Requires:       python3-tenacity >= 3.2.1
-Requires:       python3-six >= 1.9.0
-Requires:       python3-neutron-lib >= 1.9.0
-Requires:       python3-oslo-i18n >= 2.1.0
-Requires:       python3-oslo-log >= 3.22.0
-Requires:       python3-oslo-serialization >= 1.10.0
-Requires:       python3-oslo-service >= 1.10.0
-Requires:       python3-oslo-utils >= 3.20.0
-Requires:       python3-pyOpenSSL >= 0.14
+Requires:       python3-six >= 1.10.0
+Requires:       python3-neutron-lib >= 1.13.0
+Requires:       python3-oslo-i18n >= 3.15.3
+Requires:       python3-oslo-log >= 3.36.0
+Requires:       python3-oslo-serialization >= 2.18.0
+Requires:       python3-oslo-service >= 1.24.0
+Requires:       python3-oslo-utils >= 3.33.0
+Requires:       python3-pyOpenSSL >= 16.2.0
 %description -n python3-%{pypi_name}
 vmware-nsxlib is a common library that interfaces with VMware NSX
 
