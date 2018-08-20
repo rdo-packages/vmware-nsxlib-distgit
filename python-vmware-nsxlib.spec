@@ -1,8 +1,7 @@
 %{!?upstream_version: %global upstream_version %{version}%{?milestone}}
 
-# TODO(jpena): There is no python3-neutron-lib yet, so let's skip python3 for now
 %if 0%{?fedora} >= 24
-%global with_python3 0
+%global with_python3 1
 %endif
 
 %global pypi_name vmware-nsxlib
@@ -33,7 +32,6 @@ BuildRequires:  python2-testtools
 BuildRequires:  python2-devel
 BuildRequires:  python2-hacking
 BuildRequires:  python2-mock
-BuildRequires:  python-neutron-lib
 BuildRequires:  python2-oslo-sphinx
 BuildRequires:  python2-oslotest
 BuildRequires:  python2-pbr
@@ -45,15 +43,14 @@ BuildRequires:  python2-sphinx
 Requires:       python2-pbr >= 2.0.0
 Requires:       python2-eventlet >= 0.18.2
 Requires:       python2-netaddr >= 0.7.18
-Requires:       python2-tenacity >= 3.2.1
+Requires:       python2-tenacity >= 4.4.0
 Requires:       python2-six >= 1.10.0
-Requires:       python-neutron-lib >= 1.13.0
 Requires:       python2-oslo-i18n >= 3.15.3
 Requires:       python2-oslo-log >= 3.36.0
 Requires:       python2-oslo-serialization >= 2.18.0
 Requires:       python2-oslo-service >= 1.24.0
 Requires:       python2-oslo-utils >= 3.33.0
-Requires:       python2-pyOpenSSL >= 16.2.0
+Requires:       python2-pyOpenSSL >= 17.1.0
 Requires:       python-enum34
 
 %description -n python2-%{pypi_name}
@@ -90,7 +87,6 @@ BuildRequires:  python3-testtools
 BuildRequires:  python3-devel
 BuildRequires:  python3-hacking
 BuildRequires:  python3-mock
-BuildRequires:  python3-neutron-lib
 BuildRequires:  python3-oslo-sphinx
 BuildRequires:  python3-oslotest
 BuildRequires:  python3-pbr
@@ -101,15 +97,14 @@ BuildRequires:  python3-testresources
 Requires:       python3-pbr >= 2.0.0
 Requires:       python3-eventlet >= 0.18.2
 Requires:       python3-netaddr >= 0.7.18
-Requires:       python3-tenacity >= 3.2.1
+Requires:       python3-tenacity >= 4.4.0
 Requires:       python3-six >= 1.10.0
-Requires:       python3-neutron-lib >= 1.13.0
 Requires:       python3-oslo-i18n >= 3.15.3
 Requires:       python3-oslo-log >= 3.36.0
 Requires:       python3-oslo-serialization >= 2.18.0
 Requires:       python3-oslo-service >= 1.24.0
 Requires:       python3-oslo-utils >= 3.33.0
-Requires:       python3-pyOpenSSL >= 16.2.0
+Requires:       python3-pyOpenSSL >= 17.1.0
 %description -n python3-%{pypi_name}
 vmware-nsxlib is a common library that interfaces with VMware NSX
 
