@@ -190,3 +190,4 @@ rm -rf .testrepository
 * Mon Feb 26 2018 RDO <dev@lists.rdoproject.org> 12.0.1-1
 - Update to 12.0.1
 
+# REMOVEME: error caused by commit http://git.openstack.org/cgit/openstack/vmware-nsxlib/commit/?id=9504614839b722774789573dcb36862b5a2b2cc7
