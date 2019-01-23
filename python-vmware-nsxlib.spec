@@ -67,9 +67,13 @@ Requires:       python%{pyver}-pyOpenSSL >= 17.1.0
 # Handle python2 exception
 %if %{pyver} == 2
 BuildRequires:  python-requests-mock
+BuildRequires:  python-decorator
+Requires:       python-decorator
 Requires:       python-enum34
 %else
 BuildRequires:  python%{pyver}-requests-mock
+BuildRequires:  python%{pyver}-decorator
+Requires:       python%{pyver}-decorator
 %endif
 
 %description -n python%{pyver}-%{pypi_name}
