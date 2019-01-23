@@ -32,6 +32,7 @@ Summary:        A common library that interfaces with VMware NSX
 %{?python_provide:%python_provide python%{pyver}-%{pypi_name}}
 
 BuildRequires:  git
+BuildRequires:  python%{pyver}-decorator
 BuildRequires:  python%{pyver}-fixtures
 BuildRequires:  python%{pyver}-setuptools
 BuildRequires:  python%{pyver}-subunit
@@ -53,6 +54,7 @@ BuildRequires:  python%{pyver}-tenacity
 BuildRequires:  python%{pyver}-testresources
 BuildRequires:  python%{pyver}-sphinx
 Requires:       python%{pyver}-pbr >= 2.0.0
+Requires:       python%{pyver}-decorator
 Requires:       python%{pyver}-eventlet >= 0.18.2
 Requires:       python%{pyver}-netaddr >= 0.7.18
 Requires:       python%{pyver}-tenacity >= 4.4.0
