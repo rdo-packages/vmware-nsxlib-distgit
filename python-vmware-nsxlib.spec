@@ -52,6 +52,7 @@ BuildRequires:  python%{pyver}-sphinx
 BuildRequires:  python%{pyver}-tenacity
 BuildRequires:  python%{pyver}-testresources
 BuildRequires:  python%{pyver}-sphinx
+Requires:       pyOpenSSL >= 17.1.0
 Requires:       python%{pyver}-pbr >= 2.0.0
 Requires:       python%{pyver}-eventlet >= 0.18.2
 Requires:       python%{pyver}-netaddr >= 0.7.18
@@ -68,12 +69,12 @@ Requires:       python%{pyver}-pyOpenSSL >= 17.1.0
 %if %{pyver} == 2
 BuildRequires:  python-requests-mock
 BuildRequires:  python-decorator
-Requires:       python-decorator
+Requires:       python-decorator >= 4.3.0
 Requires:       python-enum34
 %else
 BuildRequires:  python%{pyver}-requests-mock
 BuildRequires:  python%{pyver}-decorator
-Requires:       python%{pyver}-decorator
+Requires:       python%{pyver}-decorator >= 4.3.0
 %endif
 
 %description -n python%{pyver}-%{pypi_name}
