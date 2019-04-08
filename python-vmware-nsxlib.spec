@@ -15,8 +15,8 @@
 %global module vmware_nsxlib
 
 Name:           python-%{pypi_name}
-Version:        XXX
-Release:        XXX
+Version:        14.0.0
+Release:        1%{?dist}
 Summary:        A common library that interfaces with VMware NSX
 
 License:        ASL 2.0
@@ -133,3 +133,6 @@ rm -rf html/.{doctrees,buildinfo}
 %doc html
 
 %changelog
+* Mon Apr 08 2019 Slawek Kaplonski <skaplons@redhat.com> 14.0.0-1
+- Update to 14.0.0
+
