@@ -13,6 +13,7 @@
 
 %global pypi_name vmware-nsxlib
 %global module vmware_nsxlib
+%global with_doc 1
 
 Name:           python-%{pypi_name}
 Version:        XXX
@@ -41,7 +42,6 @@ BuildRequires:  python%{pyver}-testtools
 BuildRequires:  python%{pyver}-devel
 BuildRequires:  python%{pyver}-hacking
 BuildRequires:  python%{pyver}-mock
-BuildRequires:  python%{pyver}-oslo-sphinx
 BuildRequires:  python%{pyver}-oslotest
 BuildRequires:  python%{pyver}-oslo-log
 BuildRequires:  python%{pyver}-oslo-serialization
@@ -51,7 +51,6 @@ BuildRequires:  python%{pyver}-pbr
 BuildRequires:  python%{pyver}-sphinx
 BuildRequires:  python%{pyver}-tenacity
 BuildRequires:  python%{pyver}-testresources
-BuildRequires:  python%{pyver}-sphinx
 Requires:       python%{pyver}-pbr >= 2.0.0
 Requires:       python%{pyver}-eventlet >= 0.18.2
 Requires:       python%{pyver}-netaddr >= 0.7.18
@@ -90,10 +89,16 @@ A common library that interfaces with VMware NSX
 This package contains the test files.
 
 
+%if 0%{?with_doc}
 %package -n python-%{pypi_name}-doc
 Summary:        vmware-nsxlib documentation
+
+BuildRequires:  python%{pyver}-oslo-sphinx
+BuildRequires:  python%{pyver}-sphinx
+
 %description -n python-%{pypi_name}-doc
 Documentation for vmware-nsxlib
+%endif
 
 
 %prep
@@ -106,10 +111,12 @@ rm -rf %{pypi_name}.egg-info
 %build
 %{pyver_build}
 
+%if 0%{?with_doc}
 # generate html docs
 sphinx-build-%{pyver} doc/source html
 # remove the sphinx-build-%{pyver} leftovers
 rm -rf html/.{doctrees,buildinfo}
+%endif
 
 %install
 %{pyver_install}
@@ -128,8 +135,10 @@ rm -rf html/.{doctrees,buildinfo}
 %license LICENSE
 %{pyver_sitelib}/%{module}/tests
 
+%if 0%{?with_doc}
 %files -n python-%{pypi_name}-doc
 %license LICENSE
 %doc html
+%endif
 
 %changelog
