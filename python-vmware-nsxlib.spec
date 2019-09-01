@@ -142,3 +142,4 @@ rm -rf html/.{doctrees,buildinfo}
 %endif
 
 %changelog
+# REMOVEME: error caused by commit http://git.openstack.org/cgit/openstack/vmware-nsxlib/commit/?id=54393a235c04a489da8e05cd524b14631a8100fe
