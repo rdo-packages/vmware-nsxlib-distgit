@@ -16,8 +16,8 @@
 %global with_doc 1
 
 Name:           python-%{pypi_name}
-Version:        XXX
-Release:        XXX
+Version:        14.0.3
+Release:        1%{?dist}
 Summary:        A common library that interfaces with VMware NSX
 
 License:        ASL 2.0
@@ -142,3 +142,6 @@ rm -rf html/.{doctrees,buildinfo}
 %endif
 
 %changelog
+* Thu Oct 10 2019 RDO <dev@lists.rdoproject.org> 14.0.3-1
+- Update to 14.0.3
+
