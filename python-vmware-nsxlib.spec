@@ -13,7 +13,8 @@
 
 %global pypi_name vmware-nsxlib
 %global module vmware_nsxlib
-%global with_doc 1
+# oslosphinx do not work with sphinx > 2
+%global with_doc 0
 
 Name:           python-%{pypi_name}
 Version:        XXX
