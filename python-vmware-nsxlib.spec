@@ -127,7 +127,7 @@ rm -rf html/.{doctrees,buildinfo}
 %{pyver_install}
 
 %check
-%{pyver_bin} setup.py test
+stestr-%{pyver} run
 
 %files -n python%{pyver}-%{pypi_name}
 %license LICENSE
