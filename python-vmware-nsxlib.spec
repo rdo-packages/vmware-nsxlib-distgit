@@ -52,15 +52,15 @@ BuildRequires:  python%{pyver}-pbr
 BuildRequires:  python%{pyver}-sphinx
 BuildRequires:  python%{pyver}-tenacity
 BuildRequires:  python%{pyver}-testresources
-Requires:       python%{pyver}-pbr >= 2.0.0
-Requires:       python%{pyver}-eventlet >= 0.18.2
+Requires:       python%{pyver}-pbr >= 4.0.0
+Requires:       python%{pyver}-eventlet >= 0.24.1
 Requires:       python%{pyver}-netaddr >= 0.7.18
-Requires:       python%{pyver}-tenacity >= 4.4.0
+Requires:       python%{pyver}-tenacity >= 5.0.1
 Requires:       python%{pyver}-six >= 1.10.0
 Requires:       python%{pyver}-oslo-i18n >= 3.15.3
 Requires:       python%{pyver}-oslo-log >= 3.36.0
-Requires:       python%{pyver}-oslo-serialization >= 2.18.0
-Requires:       python%{pyver}-oslo-service >= 1.24.0
+Requires:       python%{pyver}-oslo-serialization >= 2.28.1
+Requires:       python%{pyver}-oslo-service >= 1.31.0
 Requires:       python%{pyver}-oslo-utils >= 3.33.0
 Requires:       python%{pyver}-pyOpenSSL >= 17.1.0
 
