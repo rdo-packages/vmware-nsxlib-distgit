@@ -1,14 +1,3 @@
-# Macros for py2/py3 compatibility
-%if 0%{?fedora} || 0%{?rhel} > 7
-%global pyver %{python3_pkgversion}
-%else
-%global pyver 2
-%endif
-%global pyver_bin python%{pyver}
-%global pyver_sitelib %python%{pyver}_sitelib
-%global pyver_install %py%{pyver}_install
-%global pyver_build %py%{pyver}_build
-# End of macros for py2/py3 compatibility
 %{!?upstream_version: %global upstream_version %{version}%{?milestone}}
 
 %global pypi_name vmware-nsxlib
@@ -29,62 +18,54 @@ BuildArch:      noarch
 %description
 vmware-nsxlib is a common library that interfaces with VMware NSX
 
-%package -n     python%{pyver}-%{pypi_name}
+%package -n     python3-%{pypi_name}
 Summary:        A common library that interfaces with VMware NSX
-%{?python_provide:%python_provide python%{pyver}-%{pypi_name}}
+%{?python_provide:%python_provide python3-%{pypi_name}}
 
 BuildRequires:  git
-BuildRequires:  python%{pyver}-fixtures
-BuildRequires:  python%{pyver}-setuptools
-BuildRequires:  python%{pyver}-subunit
-BuildRequires:  python%{pyver}-stestr
-BuildRequires:  python%{pyver}-testscenarios
-BuildRequires:  python%{pyver}-testtools
-BuildRequires:  python%{pyver}-devel
-BuildRequires:  python%{pyver}-hacking
-BuildRequires:  python%{pyver}-mock
-BuildRequires:  python%{pyver}-oslotest
-BuildRequires:  python%{pyver}-oslo-log
-BuildRequires:  python%{pyver}-oslo-serialization
-BuildRequires:  python%{pyver}-oslo-service
-BuildRequires:  python%{pyver}-oslo-utils
-BuildRequires:  python%{pyver}-pbr
-BuildRequires:  python%{pyver}-sphinx
-BuildRequires:  python%{pyver}-tenacity
-BuildRequires:  python%{pyver}-testresources
-Requires:       python%{pyver}-pbr >= 4.0.0
-Requires:       python%{pyver}-eventlet >= 0.24.1
-Requires:       python%{pyver}-netaddr >= 0.7.18
-Requires:       python%{pyver}-tenacity >= 5.0.1
-Requires:       python%{pyver}-six >= 1.10.0
-Requires:       python%{pyver}-oslo-i18n >= 3.15.3
-Requires:       python%{pyver}-oslo-log >= 3.36.0
-Requires:       python%{pyver}-oslo-serialization >= 2.28.1
-Requires:       python%{pyver}-oslo-service >= 1.31.0
-Requires:       python%{pyver}-oslo-utils >= 3.33.0
-Requires:       python%{pyver}-pyOpenSSL >= 17.1.0
+BuildRequires:  python3-fixtures
+BuildRequires:  python3-setuptools
+BuildRequires:  python3-subunit
+BuildRequires:  python3-stestr
+BuildRequires:  python3-testscenarios
+BuildRequires:  python3-testtools
+BuildRequires:  python3-devel
+BuildRequires:  python3-hacking
+BuildRequires:  python3-mock
+BuildRequires:  python3-oslotest
+BuildRequires:  python3-oslo-log
+BuildRequires:  python3-oslo-serialization
+BuildRequires:  python3-oslo-service
+BuildRequires:  python3-oslo-utils
+BuildRequires:  python3-pbr
+BuildRequires:  python3-sphinx
+BuildRequires:  python3-tenacity
+BuildRequires:  python3-testresources
+Requires:       python3-pbr >= 4.0.0
+Requires:       python3-eventlet >= 0.24.1
+Requires:       python3-netaddr >= 0.7.18
+Requires:       python3-tenacity >= 5.0.1
+Requires:       python3-six >= 1.10.0
+Requires:       python3-oslo-i18n >= 3.15.3
+Requires:       python3-oslo-log >= 3.36.0
+Requires:       python3-oslo-serialization >= 2.28.1
+Requires:       python3-oslo-service >= 1.31.0
+Requires:       python3-oslo-utils >= 3.33.0
+Requires:       python3-pyOpenSSL >= 17.1.0
 
-# Handle python2 exception
-%if %{pyver} == 2
-BuildRequires:  python-requests-mock
-BuildRequires:  python-decorator
-Requires:       python-decorator
-Requires:       python-enum34
-%else
-BuildRequires:  python%{pyver}-requests-mock
-BuildRequires:  python%{pyver}-decorator
-Requires:       python%{pyver}-decorator
-%endif
+BuildRequires:  python3-requests-mock
+BuildRequires:  python3-decorator
+Requires:       python3-decorator
 
-%description -n python%{pyver}-%{pypi_name}
+%description -n python3-%{pypi_name}
 vmware-nsxlib is a common library that interfaces with VMware NSX
 
 
-%package -n python%{pyver}-%{pypi_name}-tests
+%package -n python3-%{pypi_name}-tests
 Summary:    A common library that interfaces with VMware NSX - tests
-Requires:   python%{pyver}-%{pypi_name} = %{version}-%{release}
+Requires:   python3-%{pypi_name} = %{version}-%{release}
 
-%description -n python%{pyver}-%{pypi_name}-tests
+%description -n python3-%{pypi_name}-tests
 A common library that interfaces with VMware NSX
 
 This package contains the test files.
@@ -94,8 +75,8 @@ This package contains the test files.
 %package -n python-%{pypi_name}-doc
 Summary:        vmware-nsxlib documentation
 
-BuildRequires:  python%{pyver}-oslo-sphinx
-BuildRequires:  python%{pyver}-sphinx
+BuildRequires:  python3-oslo-sphinx
+BuildRequires:  python3-sphinx
 
 %description -n python-%{pypi_name}-doc
 Documentation for vmware-nsxlib
@@ -110,31 +91,31 @@ rm -f *requirements.txt
 rm -rf %{pypi_name}.egg-info
 
 %build
-%{pyver_build}
+%{py3_build}
 
 %if 0%{?with_doc}
 # generate html docs
-sphinx-build-%{pyver} doc/source html
-# remove the sphinx-build-%{pyver} leftovers
+sphinx-build-3 doc/source html
+# remove the sphinx-build-3 leftovers
 rm -rf html/.{doctrees,buildinfo}
 %endif
 
 %install
-%{pyver_install}
+%{py3_install}
 
 %check
-stestr-%{pyver} run
+stestr-3 run
 
-%files -n python%{pyver}-%{pypi_name}
+%files -n python3-%{pypi_name}
 %license LICENSE
 %doc README.rst
-%{pyver_sitelib}/%{module}
-%{pyver_sitelib}/%{module}-*-py?.?.egg-info
-%exclude %{pyver_sitelib}/%{module}/tests
+%{python3_sitelib}/%{module}
+%{python3_sitelib}/%{module}-*-py?.?.egg-info
+%exclude %{python3_sitelib}/%{module}/tests
 
-%files -n python%{pyver}-%{pypi_name}-tests
+%files -n python3-%{pypi_name}-tests
 %license LICENSE
-%{pyver_sitelib}/%{module}/tests
+%{python3_sitelib}/%{module}/tests
 
 %if 0%{?with_doc}
 %files -n python-%{pypi_name}-doc
