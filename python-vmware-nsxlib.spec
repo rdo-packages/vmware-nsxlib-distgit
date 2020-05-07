@@ -12,7 +12,7 @@ Summary:        A common library that interfaces with VMware NSX
 
 License:        ASL 2.0
 URL:            https://github.com/openstack/vmware-nsxlib
-Source0:        https://tarballs.openstack.org/%{pypi_name}/%{pypi_name}-%{version}.tar.gz
+Source0:        https://tarballs.opendev.org/x/%{pypi_name}/%{pypi_name}-%{version}.tar.gz
 BuildArch:      noarch
 
 %description
