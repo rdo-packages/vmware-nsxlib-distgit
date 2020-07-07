@@ -110,7 +110,7 @@ stestr-3 run
 %license LICENSE
 %doc README.rst
 %{python3_sitelib}/%{module}
-%{python3_sitelib}/%{module}-*-py?.?.egg-info
+%{python3_sitelib}/%{module}-*-py%{python3_version}.egg-info
 %exclude %{python3_sitelib}/%{module}/tests
 
 %files -n python3-%{pypi_name}-tests
