@@ -35,7 +35,7 @@ vmware-nsxlib is a common library that interfaces with VMware NSX
 Summary:        A common library that interfaces with VMware NSX
 %{?python_provide:%python_provide python3-%{pypi_name}}
 
-BuildRequires:  git
+BuildRequires:  git-core
 BuildRequires:  python3-fixtures
 BuildRequires:  python3-setuptools
 BuildRequires:  python3-subunit
