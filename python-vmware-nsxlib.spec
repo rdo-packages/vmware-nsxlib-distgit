@@ -57,13 +57,14 @@ BuildRequires:  python3-testresources
 Requires:       python3-pbr >= 4.0.0
 Requires:       python3-eventlet >= 0.24.1
 Requires:       python3-netaddr >= 0.7.18
-Requires:       python3-tenacity >= 5.0.1
-Requires:       python3-oslo-i18n >= 3.15.3
-Requires:       python3-oslo-log >= 3.36.0
+Requires:       python3-tenacity >= 6.0.0
+Requires:       python3-oslo-i18n >= 3.20.0
+Requires:       python3-oslo-log >= 4.2.1
 Requires:       python3-oslo-serialization >= 2.28.1
 Requires:       python3-oslo-service >= 1.31.0
-Requires:       python3-oslo-utils >= 3.33.0
-Requires:       python3-pyOpenSSL >= 17.1.0
+Requires:       python3-oslo-utils >= 4.4.0
+# FIXME(ykarel) pyOpenSSL-19.1.0 Not available in CentOS8-Stream yet
+Requires:       python3-pyOpenSSL >= 19.0.0
 
 BuildRequires:  python3-requests-mock
 BuildRequires:  python3-decorator
