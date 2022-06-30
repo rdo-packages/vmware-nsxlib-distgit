@@ -140,3 +140,4 @@ stestr-3 run
 %endif
 
 %changelog
+# REMOVEME: error caused by commit https://opendev.org/openstack/vmware-nsxlib/commit/cf08f14bedce7859534857bcba6d159e34082646
