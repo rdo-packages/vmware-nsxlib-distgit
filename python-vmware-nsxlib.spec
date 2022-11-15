@@ -64,6 +64,7 @@ Requires:       python3-oslo-serialization >= 2.28.1
 Requires:       python3-oslo-service >= 1.31.0
 Requires:       python3-oslo-utils >= 4.4.0
 Requires:       python3-pyOpenSSL
+Requires:       python3-cryptography
 
 BuildRequires:  python3-requests-mock
 BuildRequires:  python3-decorator
